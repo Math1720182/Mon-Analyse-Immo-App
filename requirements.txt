@@ -1,0 +1,12 @@
+pandas
+numpy
+math
+matplotlib
+scipy
+seaborn
+itertools
+streamlit
+plotly.express
+requests
+plotly
+
