@@ -13,11 +13,9 @@ import requests
 
 st.set_page_config(page_title="Analyse DVF", layout="wide", page_icon = '📈', menu_items = {'About': "Application à but éducatif/académique uniquement. L'ensemble des filtres ne sont que purement personnel. Vous pouvez trouver les statistiques officiel via le portail data.gouv.fr, rubrique 'DVF statistique'. Pour en savoir plus, consultez la page d'introduction"})
 
-
-
 @st.cache_data
 def load_clean_data():
-    return pd.read_parquet("dvf_clean_2021_2025.parquet")
+    return pd.read_parquet("https://github.com/Math1720182/dvf_2021_2025_analysis/releases/download/v1.0.0/dvf_clean_2021_2025.parquet")
 
 @st.cache_data 
 def load_geojson():
