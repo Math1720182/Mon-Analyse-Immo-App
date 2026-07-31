@@ -41,9 +41,9 @@ if 'toast_notified' not in st.session_state:
     st.session_state.toast_notified = True
 
 
-intro_page = st.Page("views/intro.py", title="1. Introduction", default=True)
-analyse_page = st.Page("views/analyse.py", title="2. Analyse")
-stats_page = st.Page("views/stats.py", title="3. Tests statistique")
+intro_page = st.Page("intro.py", title="1. Introduction", default=True)
+analyse_page = st.Page("analyse.py", title="2. Analyse")
+stats_page = st.Page("stats.py", title="3. Tests statistique")
 
 pg = st.navigation([intro_page, analyse_page, stats_page])
 pg.run()
