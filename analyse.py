@@ -193,8 +193,8 @@ st.dataframe(
     stats_dep.style.format({
         'prix_median': '{:,.0f} €',
         'prix_moyen': '{:,.0f} €',
-        'prix_m²_median': '{:,.0f} €/m²',
-        'prix_m²_moyen': '{:,.0f} €/m²',
+        'prix_m2_median': '{:,.0f} €/m²',
+        'prix_m2_mean': '{:,.0f} €/m²',
         'nombre_vente': '{:,}'
     }), hide_index = True
 )
