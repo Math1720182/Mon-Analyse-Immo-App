@@ -13,7 +13,7 @@ import requests
 
 st.title("Tableau de bord - Valeurs Foncières (DVF)")
 
-df_clean = st.session_state.df_clean.copy()
+df_clean = st.session_state.df_clean
 
 #-------------------------------------------------------------------
 #-------Introduction à l'analyse------------------------------------
