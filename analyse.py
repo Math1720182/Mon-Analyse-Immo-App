@@ -290,13 +290,8 @@ with col1:
 
 @st.cache_data
 def cache_vente_total(df_clean):
-
-    df_temp = df_clean.copy()
-
-    if 'year' not in df_temp.columns:
-        df_temp['year'] = df_temp['Date mutation'].astype(str).str[:4]
     
-    vente_total = df_temp['year'].value_counts().reset_index()
+    vente_total = df_clean['year'].value_counts().reset_index()
     vente_total.columns = ['year', 'total sales']
     vente_total['year'] = pd.to_numeric(vente_total['year'], errors = 'coerce')
     vente_total = vente_total.sort_values(by='year', ascending =True).reset_index(drop=True)
