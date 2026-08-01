@@ -332,8 +332,8 @@ def cache_top10_m2(df_clean):
         .index
     )
     
-    df_top10 = df[df["Nom departement"].isin(top10_deps)][["Nom departement", "Price per surface"]].copy()
-    df_top10["Nom departement"] = df_sub["Nom departement"].cat.remove_unused_categories()
+    df_top10 = df_clean[df_clean["Nom departement"].isin(top10_m2)][["Nom departement", "Price per surface"]].copy()
+
     return df_top10, top10_m2
 
     
