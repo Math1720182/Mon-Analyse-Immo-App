@@ -29,11 +29,11 @@ st.subheader('1) Normalité des données : test de Kolmogorov-Smirnov')
 
 st.write("Note: le test ici est réalisé uniquement pour raison académique, le test sur le fichier DVF n'a aucun intérêt dans le sens où nous avons un dataframe de plusieurs millions de lignes. La p-value sera toujours égale à 0 car le test sera très sévère sur les écarts extremes.")
 
-sample = df_clean.dropna(subset=['Valeur fonciere']).sample(100, random_state=42).copy()
+sample = df_clean.dropna(subset=['Valeur fonciere']).sample(100, random_state=42)
 sample_mean = sample['Valeur fonciere'].mean()
 sample_std = sample['Valeur fonciere'].std()
 
-sample_m2 = df_clean.dropna(subset=['Price per surface']).sample(100, random_state=42).copy()
+sample_m2 = df_clean.dropna(subset=['Price per surface']).sample(100, random_state=42)
 sample_mean_m2 = sample_m2['Price per surface'].mean()
 sample_std_m2 = sample_m2['Price per surface'].std()
 
@@ -187,7 +187,7 @@ st.write("Test statistique de Mann-Whitney sur un échantillon aléatoire de tra
 df_clean.columns = df_clean.columns.str.strip()
 
 # On prend l'échantillon et on nettoie si besoin
-groupe = df_clean.sample(50000).copy()
+groupe = df_clean.sample(50000)
 groupe = groupe[['LIBDENS', 'Price per surface']]
 groupe = groupe[groupe['LIBDENS'].isin(['Département à prédominance rurale', 'Département à prédominance urbaine'])]
 
