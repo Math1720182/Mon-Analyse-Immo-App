@@ -237,6 +237,7 @@ with col1:
         choix_utilisateur = st.selectbox("Choisissez la métrique pour l'axe Y:", list(options_y.keys()))
         colonne_y = options_y[choix_utilisateur]
         top_10 = stats_dep.head(10)
+        top_10['Nom departement'] = top_10['Nom departement'].astype(str)
         fig, ax = plt.subplots(figsize=(7, 3.8))
     
         
