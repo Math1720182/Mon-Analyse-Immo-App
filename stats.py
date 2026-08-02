@@ -262,6 +262,8 @@ st.divider()
 # --- 3. GRAPHIQUE COTE COTE ---
 col1, col2 = st.columns([0.7, 1])
 
+groupe['LIBDENS'] = groupe['LIBDENS'].astype(str)
+
 with col1:       
     labels_modifies = [
         "Département à\nprédominance urbain",
@@ -396,6 +398,8 @@ st.divider()
 # 2.MISE EN PAGE EN DESSOUS
 
 col1, col2 = st.columns([0.7, 1])
+
+groupe_KW['Type de voie'] = groupe_KW['Type de voie'].astype(str)
 
 with col1:
     fig, ax = plt.subplots(figsize = (4,4), facecolor = 'white')
