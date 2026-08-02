@@ -13,7 +13,7 @@ import requests
 
 st.title("Tableau de bord - Valeurs Foncières (DVF)")
 
-df_clean = st.session_state.df_clean.copy()
+df_clean = st.session_state.df_clean
 
 #-------------------------------------------------------------------
 #-------Introduction à l'analyse------------------------------------
@@ -39,7 +39,7 @@ def get_map_data(df):
     return df_grouped.sort_values(by=['Code departement', 'year'])
 
 geojson_france = get_geojson()
-df_map = get_map_data(df_clean)
+df_map = get_map_data(df_clean[['Code departement','year','Nom departement','Price per surface']])
 
 
 st.title("Carte des Départements")
