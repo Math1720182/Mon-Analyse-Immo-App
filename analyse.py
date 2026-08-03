@@ -514,37 +514,42 @@ st.write("⊕ D'autres simulations et statistiques à venir.")
 #----------------------------------------------
 
 with st.sidebar:
-    st.sidebar.header("Simuler la valeur de mon bien")
+    st.header("Simuler la valeur de mon bien")
+    with st.form("form_estimation"):
+        commune_select = st.selectbox(
+            "🔎 Rechercher votre ville :",
+            options=commune,
+            index=index_defaut,
+            help="Tapez les premières lettres pour filtrer la liste\n\n**Estimation basée sur le prix médian au m² de 2025**",
+        )
 
-    commune_select = st.selectbox(
-        "🔎 Rechercher votre ville :",
-        options=commune,
-        index=index_defaut,
-        help="Tapez les premières lettres pour filtrer la liste\n\n**Estimation basée sur le prix médian au m² de 2025**"
-    )
-    
-    surface = st.sidebar.number_input("Surface (m²)", min_value=9, max_value=400, value=60)
-    type_bien = st.sidebar.selectbox("Type de bien", ["Appartement", "Maison"])
+        surface = st.number_input(
+            "Surface (m²)", min_value=9, max_value=400, value=60
+        )
+        type_bien = st.selectbox("Type de bien", ["Appartement", "Maison"])
 
-    df_filtre  = df_clean[
-        (df_clean['Type local'] == type_bien) &
-        (df_clean['Commune'] == commune_select) &
-        (df_clean['year'] == 2025)]
-    
-    prix_m2_local = df_filtre['Price per surface'].median()
-
-    if pd.notna(prix_m2_local) and prix_m2_local > 0:
-        valeur_estimee = surface * prix_m2_local
-        estimation_display = f"{valeur_estimee:,.0f} €".replace(",", " ")
-    else:
-        estimation_display = "Données insuffisantes"
+        submitted = st.form_submit_button(
+            "Estimer mon bien", use_container_width=True
+        )
         
-    st.metric(
-        label="Estimation **indicative**:", 
-        value=estimation_display
-    )
+    if submitted:
+        df_filtre = df_clean[
+            (df_clean["Type local"] == type_bien)
+            & (df_clean["Commune"] == commune_select)
+            & (df_clean["year"] == 2025)
+        ]
 
+        prix_m2_local = df_filtre["Price per surface"].median()
 
+        if pd.notna(prix_m2_local) and prix_m2_local > 0:
+            valeur_estimee = surface * prix_m2_local
+            estimation_display = f"{valeur_estimee:,.0f} €".replace(",", " ")
+        else:
+            estimation_display = "Données insuffisantes"
+
+        st.metric(
+            label="Estimation **indicative** :", value=estimation_display
+        )
 
     
 #-----------------------
