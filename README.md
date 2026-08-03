@@ -19,3 +19,6 @@ En arrière-plan, les statistiques sont calculées de deux manières différente
 - Interface: Streamlit
 - Statistiques: SciPy **mais surtout tout à la main !**
 
+## Source
+
+Données issues du jeu de données DVF (Demandes de Valeurs Foncières) produit par la DGFiP et publié sur data.gouv.fr sous Licence Ouverte 2.0.
