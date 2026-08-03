@@ -10,7 +10,7 @@ st.markdown('## Analyse du marché immobilier en France', text_alignment = 'cent
 st.divider()
 
 #-----------------------------------------
-st.subheader("0. Informations liminaires")
+st.subheader("0. Informations préliminaires")
 
 st.write("Le présent jeu de données « Demandes de valeurs foncières », publié et produit par la direction générale des finances publiques, permet de connaître les transactions immobilières intervenues au cours des cinq dernières années sur le territoire métropolitain et les DOM-TOM, à l’exception de l’Alsace, de la Moselle et de Mayotte. Les données contenues sont issues des actes notariés et des informations cadastrales sur les 5 dernières années (entre 2021 et 2025)")
 st.write("En application du décret du 28 décembre 2018, les informations communiquées font l’objet d’une mise à jour semestrielle. Chaque année, une première diffusion sera effectuée en avril, présentant les mutations intervenues au cours des cinq dernières années et ayant fait l’objet d’une publication par un service de publicité foncière avant le 31 décembre de l’année précédente. La diffusion du mois d’avril concerne en conséquence cinq millésimes soit 10 semestres. Une seconde diffusion sera effectuée en octobre portant sur les mutations intervenues au cours des cinq dernières années et ayant fait l’objet d’une publication par un service de publicité foncière avant le 30 juin de l’année en cours. **L’attention est appelée sur le fait qu’en avril comme en octobre, compte tenu des publications effectuées au cours du dernier semestre pouvant porter sur des mutations intervenues lors de semestres précédents, l’ensemble des fichiers annuels sont actualisés.**")
