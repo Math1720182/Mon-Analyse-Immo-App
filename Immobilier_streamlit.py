@@ -44,9 +44,9 @@ if 'toast_notified' not in st.session_state:
 
 pages = {
     "**MENU**": [
-        st.Page("views/intro.py", title="Introduction"),
-        st.Page("views/analyse.py", title="Tableau de bord", default = True),
-        st.Page("views/stats.py", title="Statistiques"),
+        st.Page("intro.py", title="Introduction"),
+        st.Page("analyse.py", title="Tableau de bord", default = True),
+        st.Page("stats.py", title="Statistiques"),
     ]
 }
 
