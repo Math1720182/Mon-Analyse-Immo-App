@@ -632,5 +632,7 @@ with st.sidebar:
 #-----------------------
 
 with st.sidebar:
-    st.caption('v1.0.0')
+    st.divider()
+    st.caption('v1.0.1')
     st.caption('Made with ❤️ by Thomas')
+    st.link_button('Voir le code sur GitHub 👾', "https://github.com/Math1720182/dvf_2021_2025_analysis")
