@@ -170,6 +170,8 @@ def afficher_section_carte(df_map, geojson_france):
                 value=f"{last_year_median:,.0f} €/m²",
                 delta=label_delta
             )
+        else:
+            st.warning('Veuillez sélectionner un département pour accéder à ses données')
 
 afficher_section_carte(df_map, geojson_france)
 
