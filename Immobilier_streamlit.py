@@ -46,6 +46,7 @@ pages = {
     "**MENU**": [
         st.Page("intro.py", title="Introduction"),
         st.Page("analyse.py", title="Tableau de bord", default = True),
+        st.Page("simulateur.py", title="Simulateur de prix"),
         st.Page("stats.py", title="Statistiques"),
     ]
 }
