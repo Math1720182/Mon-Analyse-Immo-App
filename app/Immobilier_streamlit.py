@@ -24,12 +24,14 @@ def telecharger_fichier_si_absent():
     
     if not os.path.exists(NOM_FICHIER_LOCAL):
         with st.spinner("Téléchargement initial de la base DVF en cours..."):
-            reponse = requests.get(URL_GITHUB)
+            reponse = requests.get(URL_GITHUB, timeout = 30)
             
-            with open(NOM_FICHIER_LOCAL, "wb") as fichier:
-                fichier.write(reponse.content)
-                
-            st.success("Téléchargement terminé !")
+            if reponse.status_code == 200:
+                with open(NOM_FICHIER_LOCAL, "wb") as fichier:
+                    fichier.write(reponse.content)
+                st.success("Téléchargement terminé !")
+            else:
+                st.error(f"Erreur lors du téléchargement (Code HTTP : {reponse.status_code})")
 
 telecharger_fichier_si_absent()
 
