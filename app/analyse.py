@@ -187,7 +187,7 @@ def afficher_section_carte(df_map, geojson_france):
     col_carte, col_detail = st.columns([3, 1])
     
     with col_carte:
-        st.subheader("Prix médian au m² par département")
+        st.subheader("Prix médian au m² par département", help = "Pour une analyse fiable il faut utiliser la médiane et non la moyenne. La distribution des données ne suivant pas une loi normale, il faut utiliser la médiane. Pour plus d'informations, visitez la page 'Statistiques'."))
 
         #Pour les couleur
         vmin = df_map["Price per surface"].quantile(0.05)
