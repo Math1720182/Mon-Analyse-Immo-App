@@ -10,3 +10,4 @@ plotly
 pydeck
 geopandas
 duckdb
+statsmodels
