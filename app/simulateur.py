@@ -446,8 +446,10 @@ except Exception as e:
 
 #-----Services et santé à proximité------
 
+extension_distance = 0.15
+
 @st.cache_data
-def bpe_df(lat, lon, rayon_degres = 0.15):
+def bpe_df(lat, lon, rayon_degres = extension_distance):
 
     connexion = duckdb.connect()
 
@@ -479,9 +481,16 @@ def bpe_df(lat, lon, rayon_degres = 0.15):
 bpe_df_return = bpe_df(lat, lon)
 
 #Urgence
-urgence = bpe_df_return[bpe_df_return['TYPEQU'] == 'D106'].sort_values(by='distance').iloc[0]
-nom_urgence = urgence["NOMRS"]
-distance_urgence = urgence["distance"]
+if not bpe_df_return[bpe_df_return['TYPEQU'] == 'D106'].empty:
+    urgence = bpe_df_return[bpe_df_return['TYPEQU'] == 'D106'].sort_values(by='distance').iloc[0]
+    nom_urgence = urgence["NOMRS"]
+    distance_urgence = urgence["distance"]
+else:
+    extension_distance = 1
+    bpe_df_return = bpe_df(lat, lon, extension_distance)
+    urgence = bpe_df_return[bpe_df_return['TYPEQU'] == 'D106'].sort_values(by='distance').iloc[0]
+    nom_urgence = urgence["NOMRS"]
+    distance_urgence = urgence["distance"]
 
 #Généraliste
 generaliste = bpe_df_return[bpe_df_return['TYPEQU'] == 'D265'].sort_values(by='distance').iloc[0]
