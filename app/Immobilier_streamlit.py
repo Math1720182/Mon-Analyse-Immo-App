@@ -18,7 +18,7 @@ st.set_page_config(page_title="Analyse DVF", layout="wide", page_icon = '📈', 
 
 
 NOM_FICHIER_LOCAL = "dvf_clean_2021_2025_v2.parquet"
-URL_GITHUB = "https://github.com/Math1720182/dvf_2021_2025_analysis/releases/download/v2.0.0/dvf_clean_2021_2025_v2.parquet"
+URL_GITHUB = "https://github.com/Math1720182/Mon-Analyse-Immo-App/releases/download/v2.0.0/dvf_clean_2021_2025_v2.parquet"
 
 def telecharger_fichier_si_absent_dvf():
     
@@ -36,7 +36,7 @@ def telecharger_fichier_si_absent_dvf():
 telecharger_fichier_si_absent_dvf()
 
 NOM_FICHIER_LOCAL = "BPE25.parquet"
-URL_GITHUB = "https://github.com/Math1720182/dvf_2021_2025_analysis/releases/download/v1.0.0/BPE25.parquet"
+URL_GITHUB = "https://github.com/Math1720182/Mon-Analyse-Immo-App/releases/download/v1.0.0/BPE25.parquet"
 
 def telecharger_fichier_si_absent_BPE():
     
