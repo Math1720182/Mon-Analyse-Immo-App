@@ -425,7 +425,7 @@ params = {
 
 
 try:
-    response = requests.get(url, params=params, timeout=5)
+    response = requests.get(url, params=params, timeout=10)
     response.raise_for_status()
     
     if response.status_code == 200:
