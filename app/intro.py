@@ -50,9 +50,10 @@ st.write(
     f"- Près de **{montant_total:.1f} milliards d'euros** de volume foncier représenté.\n"
     f"- Une couverture temporelle de **2021 à 2025**.\n\n"
     
-    "**J'ai construit l'application sur deux types d'analyse:**\n"
+    "**J'ai construit l'application sur trois types d'analyse:**\n"
     "- Une page d'analyse globale qui met en avant des métriques sur le marché "
     "de l'immobilier ainsi que des graphiques interactifs pour visualiser ces derniers.\n"
+    "- Une page de simulateur qui permet de simuler un projet immobilier en analysant des métriques et des informations sur l'environnement.\n"
     "- Une page de statistiques, plus technique, qui grâce à des tests permet "
     "de répondre à diverses hypothèses.\n\n"
     "J'ai pris plaisir à réaliser cette analyse qui a permis d'enfin concrétiser "
@@ -60,7 +61,7 @@ st.write(
     "En fond, les statistiques sont calculées de deux manières différentes : une via la méthode manuelle afin d'appliquer les modèles mathématiques au plus proche et une en utilisant la bibliothèque *scipy* afin de vérifier et de valider mes résultats *fait main*\n\n"
     "Stack technique utilisée:\n\n"
     "- Python: Pandas, NumPy (pour la manipulation des données)\n"
-    "- Visualisation: Seaborn, Matplotlib, Pydeck, Geopandas\n"
+    "- Visualisation: Seaborn, Matplotlib, Pydeck, Geopandas, Plotly\n"
     "- Interface: Streamlit\n"
     "- Statistiques: SciPy **mais surtout tout à la main !**"
 )
@@ -113,4 +114,4 @@ with st.sidebar:
     """,)
     
     st.caption('Made with ❤️ by Thomas')
-    st.link_button('Voir le code sur GitHub 👾', "https://github.com/Math1720182/dvf_2021_2025_analysis")
+    st.link_button('Voir le code sur GitHub 👾', "https://github.com/Math1720182/Mon-Analyse-Immo-App")
