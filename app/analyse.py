@@ -136,7 +136,7 @@ with st.sidebar:
     """,)
     
     st.caption('Made with ❤️ by Thomas')
-    st.link_button('Voir le code sur GitHub 👾', "https://github.com/Math1720182/dvf_2021_2025_analysis")
+    st.link_button('Voir le code sur GitHub 👾', "https://github.com/Math1720182/Mon-Analyse-Immo-App")
 
     
 #---------------------------------------------------
