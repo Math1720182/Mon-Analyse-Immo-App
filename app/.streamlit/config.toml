@@ -1,2 +1,4 @@
 [client]
 showErrorDetails = false
+[theme]
+base = "light"
