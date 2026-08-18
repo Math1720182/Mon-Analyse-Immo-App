@@ -718,35 +718,35 @@ with col3:
         else:
             distance_affiche = f"{distance_urgence:.0f} m"
         st.markdown("##### Urgence")
-        st.text(f"{distance_affiche} - *{nom_urgence}*")
+        st.text(f"{distance_affiche} - {nom_urgence}")
     
         if distance_generaliste >= 1000:
             distance_affiche = f"{distance_generaliste / 1000:.1f} km"
         else:
             distance_affiche = f"{distance_generaliste:.0f} m"
         st.markdown("##### Médecin généraliste")
-        st.text(f"{distance_affiche} - *{nom_generaliste}*")
+        st.text(f"{distance_affiche} - {nom_generaliste}")
         
         if distance_pharmacie >= 1000:
             distance_affiche = f"{distance_pharmacie / 1000:.1f} km"
         else:
             distance_affiche = f"{distance_pharmacie:.0f} m"
         st.markdown("##### Pharmacie")
-        st.text(f"{distance_affiche} - *{nom_pharmacie}*")
+        st.text(f"{distance_affiche} - {nom_pharmacie}")
 
         if distance_dentiste >= 1000:
             distance_affiche = f"{distance_dentiste / 1000:.1f} km"
         else:
             distance_affiche = f"{distance_dentiste:.0f} m"
         st.markdown("##### Dentiste")
-        st.text(f"{distance_affiche} - *{nom_dentiste}*")
+        st.text(f"{distance_affiche} - {nom_dentiste}")
 
         if distance_kine >= 1000:
             distance_affiche = f"{distance_kine / 1000:.1f} km"
         else:
             distance_affiche = f"{distance_kine:.0f} m"
         st.markdown("##### Kinésithérapeute")
-        st.text(f"{distance_affiche} - *{nom_kine}*")
+        st.text(f"{distance_affiche} - {nom_kine}")
 
         st.markdown(
         """
@@ -769,7 +769,7 @@ with col3:
         else:
             distance_affiche = f"{distance_supermarche:.0f} m"
         st.markdown("##### Supermaché")
-        st.text(f"{distance_affiche} - *{nom_supermarche}*")
+        st.text(f"{distance_affiche} - {nom_supermarche}")
 
         
         if distance_boulangerie >= 1000:
@@ -777,7 +777,7 @@ with col3:
         else:
             distance_affiche = f"{distance_boulangerie:.0f} m"
         st.markdown("##### Boulangerie")
-        st.text(f"{distance_affiche} - *{nom_boulangerie}*")
+        st.text(f"{distance_affiche} - {nom_boulangerie}")
 
         
         if distance_coiffeur >= 1000:
@@ -785,7 +785,7 @@ with col3:
         else:
             distance_affiche = f"{distance_coiffeur:.0f} m"
         st.markdown("##### Coiffeur")
-        st.text(f"{distance_affiche} - *{nom_coiffeur}*")
+        st.text(f"{distance_affiche} - {nom_coiffeur}")
 
         
         if distance_poste >= 1000:
@@ -793,7 +793,7 @@ with col3:
         else:
             distance_affiche = f"{distance_poste:.0f} m"
         st.markdown("##### La Poste")
-        st.text(f"{distance_affiche} - *{nom_poste}*")
+        st.text(f"{distance_affiche} - {nom_poste}")
 
         st.markdown(
         """
@@ -815,20 +815,20 @@ with col3:
         else:
             distance_affiche = f"{distance_ecole:.0f} m"
         st.markdown("##### École maternelle/primaire")
-        st.text(f"{distance_affiche} - *{nom_ecole}*")
+        st.text(f"{distance_affiche} - {nom_ecole}")
 
         if distance_college >= 1000:
             distance_affiche = f"{distance_college / 1000:.1f} km"
         else:
             distance_affiche = f"{distance_college:.0f} m"
         st.markdown("##### Collège")
-        st.text(f"{distance_affiche} - *{nom_college}*")
+        st.text(f"{distance_affiche} - {nom_college}")
 
         if distance_lycee >= 1000:
             distance_affiche = f"{distance_lycee / 1000:.1f} km"
         else:
             distance_affiche = f"{distance_lycee:.0f} m"
         st.markdown("##### Lycée")
-        st.text(f"{distance_affiche} - *{nom_lycee}*")
+        st.text(f"{distance_affiche} - {nom_lycee}")
         
 
